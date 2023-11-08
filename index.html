@@ -25,40 +25,44 @@
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body class="flex1">
-    <div class="card flex2" action="">
-      <picture id="str" class="flex1">
-        <img src="./images/icon-star.svg" alt="STAR" />
-      </picture>
-      <div class="content">
-        <h1>How did we do?</h1>
-        <p>
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
+    <main>
+      <div class="card flex2" action="">
+        <picture id="str" class="flex1">
+          <img src="./images/icon-star.svg" alt="STAR" />
+        </picture>
+        <div class="content">
+          <h1>How did we do?</h1>
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
+        <div id="choices" class="flex3">
+          <div class="choice c-h flex1"><span>1</span></div>
+          <div class="choice c-h flex1"><span>2</span></div>
+          <div class="choice c-h flex1"><span>3</span></div>
+          <div class="choice c-h flex1"><span>4</span></div>
+          <div class="choice c-h flex1"><span>5</span></div>
+        </div>
+        <input type="submit" id="submit" value="SUBMIT" />
       </div>
-      <div id="choices" class="flex3">
-        <div class="choice c-h flex1"><span>1</span></div>
-        <div class="choice c-h flex1"><span>2</span></div>
-        <div class="choice c-h flex1"><span>3</span></div>
-        <div class="choice c-h flex1"><span>4</span></div>
-        <div class="choice c-h flex1"><span>5</span></div>
+      <div class="card flex2" style="display: none">
+        <picture>
+          <img src="./images/illustration-thank-you.svg" alt="thank you" />
+        </picture>
+        <div id="selection">
+          You selected <span id="number"></span> Out Of 5
+        </div>
+        <div class="content" style="text-align: center">
+          <h1>Thank you</h1>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
       </div>
-      <input type="submit" id="submit" value="SUBMIT" />
-    </div>
-    <div class="card flex2" style="display: none">
-      <picture>
-        <img src="./images/illustration-thank-you.svg" alt="thank you" />
-      </picture>
-      <div id="selection">You selected <span id="number"></span> Out Of 5</div>
-      <div class="content" style="text-align: center">
-        <h1>Thank you</h1>
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don’t hesitate to get in touch!
-        </p>
-      </div>
-    </div>
-    <div id="attribution">
+    </main>
+    <footer id="attribution">
       Challenge by
       <a
         href="https://www.frontendmentor.io?ref=challenge"
@@ -72,7 +76,7 @@
         target="_blank"
         >Ahmed Hanye</a
       >.
-    </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
