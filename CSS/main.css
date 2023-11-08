@@ -1,7 +1,7 @@
 /* Variables */
 :root {
   /* Primary */
-  --orange: hsl(25, 97%, 53%);
+  --orange: #c45303;
   /* Neutral */
   --white: hsl(0, 0%, 100%);
   --light-grey: hsl(217, 12%, 63%);
