@@ -1,7 +1,7 @@
 /* Variables */
 :root {
   /* Primary */
-  --orange: #c45303;
+  --orange: hsl(25, 97%, 53%);
   /* Neutral */
   --white: hsl(0, 0%, 100%);
   --light-grey: hsl(217, 12%, 63%);
@@ -105,7 +105,7 @@ body {
   margin: 2rem 0;
 }
 .card > #submit {
-  background-color: var(--orange);
+  background-color: #c45303;
   width: 20.5rem;
   height: 2.5rem;
   color: var(--white);
