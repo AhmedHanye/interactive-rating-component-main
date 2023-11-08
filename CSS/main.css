@@ -1,0 +1,165 @@
+/* Variables */
+:root {
+  /* Primary */
+  --orange: hsl(25, 97%, 53%);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(215, 25%, 14%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --tranparent-dark-blue: hsla(216, 12%, 54%, 0.1);
+}
+/* Google Fonts */
+@font-face {
+  font-family: "Overpass", sans-serif;
+  src: url(../Overpass/Overpass-VariableFont_wght.ttf) format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  -mox-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  background-color: var(--very-dark-blue);
+  position: relative;
+}
+/* Classes */
+.flex1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.flex3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card {
+  width: 412px;
+  height: 416px;
+  padding: 2.5rem;
+  background-color: var(--dark-blue);
+  border-radius: 1.857rem;
+  position: relative;
+}
+.content > h1 {
+  color: var(--white);
+  font-weight: 700;
+}
+.content > p {
+  color: var(--light-grey);
+  line-height: 1.4rem;
+  font-weight: 400;
+}
+.choice {
+  background-color: var(--tranparent-dark-blue);
+  color: var(--light-grey);
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.c-h:hover {
+  /* this works when you hover but it will be disabled when you click on it */
+  color: white;
+  background-color: var(--medium-grey);
+  transition: 0.2s;
+}
+.chosen {
+  /* this works when you click on a number */
+  background-color: var(--orange);
+  color: var(--white);
+}
+/* ID's */
+.card > #str {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--tranparent-dark-blue);
+  border-radius: 50%;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.card > #choices {
+  width: 100%;
+  margin: 2rem 0;
+}
+.card > #submit {
+  background-color: var(--orange);
+  width: 20.5rem;
+  height: 2.5rem;
+  color: var(--white);
+  border: none;
+  border-radius: 2rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card > #submit:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+#selection {
+  color: var(--orange);
+  background-color: var(--tranparent-dark-blue);
+  width: 12rem;
+  padding: 0.6rem;
+  margin: 2rem 0 0.5rem 0;
+  border-radius: 1rem;
+  text-align: center;
+}
+#attribution {
+  position: absolute;
+  bottom: 1.8rem;
+  color: var(--white);
+}
+#attribution > a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0.2rem;
+  color: var(--orange);
+  transition: 0.2s;
+}
+#attribution > a:hover{
+    color: var(--medium-grey);
+    transform: translateY(-0.1rem);
+}
+
+
+/* Media Queries */
+@media (max-width: 600px){
+    .card{
+        width: 90%;
+    }
+    .card > #submit{
+        width: 100%;
+    }
+}
+@media (max-width: 440px) {
+    .card{
+        transform: scale(0.8);
+        width: 100%;
+        height: 420px;
+        font-size: 13px;
+    }
+    #attribution{
+        font-size: 0.7rem;
+    }
+}
