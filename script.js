@@ -1,8 +1,10 @@
+// Choosing the elements from the html file
 const cards = document.querySelectorAll(".card");
 const C = document.querySelectorAll(".choice");
 const l = C.length;
 const s = document.querySelector('input[type="submit"]');
 const n = document.querySelector("#number");
+// this snippet code is necessary for the validation
 let pre = -1;
 for (let i = 0; i < l; i++) {
   C[i].addEventListener("click", () => {
@@ -15,6 +17,7 @@ for (let i = 0; i < l; i++) {
     pre === i ? (pre = -1) : (pre = i);
   });
 }
+// this snippet code is necessary for showing the message
 s.onclick = () => {
   if (pre != -1) {
     n.innerHTML = pre + 1;
